@@ -1,41 +1,32 @@
 'use strict';
 
 const delivery = prompt('Куда вы хотите оформить доставку?');
-let prise;
-let country;
 
-if (!delivery) {
-  alert('ну и ладно!');
-} else {
-  country = delivery.toLowerCase();
+if (delivery === null) {
+  console.log('Отменено пользователем!');
 }
 
 switch (delivery.toLowerCase()) {
   case 'китай':
-    prise = 100;
-    alert(`Доставка в ${country} будет стоить ${prise} кредитов`);
+    console.log(`Доставка в китай будет стоить 100 кредитов`);
     break;
 
   case 'южная америка':
-    prise = 250;
-    alert(`Доставка в ${country} будет стоить ${prise} кредитов`);
+    console.log('Доставка в южная америка будет стоить 250 кредитов');
     break;
 
   case 'австралия':
-    prise = 170;
-    alert(`Доставка в ${country} будет стоить ${prise} кредитов`);
+    console.log('Доставка в австралия будет стоить 170 кредитов');
     break;
 
   case 'индия':
-    prise = 80;
-    alert(`Доставка в ${country} будет стоить ${prise} кредитов`);
+    console.log('Доставка в индия будет стоить 80 кредитов');
     break;
 
   case 'ямайка':
-    prise = 120;
-    alert(`Доставка в ${country} будет стоить ${prise} кредитов`);
+    console.log('Доставка в ямайка будет стоить 120 кредитов');
     break;
 
   default:
-    alert('В вашей стране доставка не доступна');
+    console.log('В вашей стране доставка не доступна!');
 }
