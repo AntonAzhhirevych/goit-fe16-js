@@ -4,7 +4,7 @@ const ADMIN_PASSWORD = 'm4ng0h4ckz';
 let message;
 let userInput = prompt('Введите пароль!');
 
-if (!userInput) {
+if (userInput === null) {
   message = 'Отменено пользователем!';
 } else if (userInput === ADMIN_PASSWORD) {
   message = 'Добро пожаловать!';

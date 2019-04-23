@@ -7,11 +7,11 @@ const userQuestion = prompt('Какое количество дроидов вы
 if (userQuestion === null) {
   console.log('Отменено пользователем!');
 } else {
-  const totalPrice = Number(userQuestion) * pricePerDroid;
+  const totalPrice = userQuestion * pricePerDroid;
 
   if (credits < totalPrice) {
-    alert('Недостаточно средств на счету!');
+    console.log('Недостаточно средств на счету!');
   } else {
-    alert(`Вы купили ${userQuestion} дроидов, на счету осталось ${credits - totalPrice} кредитов.`);
+    console.log(`Вы купили ${userQuestion} дроидов, на счету осталось ${credits - totalPrice} кредитов.`);
   }
 }
