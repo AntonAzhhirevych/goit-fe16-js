@@ -9,14 +9,14 @@ do {
 
   if (Number(input)) {
     numbers.push(Number(input));
-  } else if (isNaN(input) === true) {
+  } else if (Number.isNaN(input) === false) {
     alert('Было введено не число, попробуйте еще раз');
   }
 } while (input !== null);
 
-if (numbers.length > 0) {
+if (numbers.length) {
   for (const number of numbers) {
     total += number;
   }
+  console.log(`Общая сума чисел равна ${total}`);
 }
-console.log(`Общая сума чисел равна ${total}`);
